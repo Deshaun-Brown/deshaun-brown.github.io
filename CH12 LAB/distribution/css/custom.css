@@ -1,0 +1,92 @@
+/* === GLOWING NAVBAR EFFECT (TOP NAV ONLY) === */
+
+header > .navbar {
+  background-color: #111 !important;
+
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header > .navbar .nav-link {
+ 
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+header> .navbar .nav-link:hover {
+  color: #00ffc3 !important;
+}
+
+/* Glowing pulse effect */
+header > .navbar::before {
+  content: '';
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #00ffc3 20%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-out;
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+header >.navbar:hover::before {
+  
+  transform: translate(-50%, -50%) scale(1.4);
+
+}
+
+
+header .navbar-collapse {
+  background-color: #222 !important; /* Dark gray so it contrasts with black */
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 195, 0.2);
+}
+
+
+header .navbar-collapse .nav-link {
+  color: rgb(255, 0, 132) !important;
+
+}
+
+
+header .navbar-collapse .nav-link:hover {
+  color: #00ffc3 !important;
+
+}
+
+.navbar-toggler{
+background-color: #a55050;
+
+} 
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  display:none;
+  color:rgb(255, 0,132);
+
+}
+ .navbar-toggler-icon {
+  transition: opacity 1.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  opacity: 0;
+}
+
+
+  /* The Lower half of the Portfolio Page*/
+
+  .lowerHalf{
+    display:flex;
+    margin:15px;
+    padding-left:15px;
+
+  }
